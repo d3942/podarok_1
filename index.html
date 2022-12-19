@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обратный отсчет</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- countdown-wrapper -->
+    <div class="countdown-wrapper">
+        <h1 class="title">Арсений до твоего подарка осталось:</h1>
+        <div id="year" class="year"></div>
+        
+        <h1><div id="redirectTimer" >10 </div></h1>
+      
+        <div class="preloader" id="preloader">
+            <div class="lds-ripple"><div></div><div></div></div>
+        </div>
+    </div>
+    <!-- // countdown-wrapper -->
+
+    <script type="text/javascript">
+        function timer(){
+        var obj=document.getElementById('redirectTimer');
+        obj.innerHTML--;
+         
+        if(obj.innerHTML==0){
+        document.location.href='http://www.yandex.ru/';
+        setTimeout(function(){},1000);
+        }
+        else
+        {
+        setTimeout(timer,1000);
+        }
+        }
+        setTimeout(timer,1000);
+        </script>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
